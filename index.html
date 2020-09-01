@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" /> 
+  <title>
+    Montar Layout
+  </title>
+
+    <!-- colocar o scale para 100% no device - obrigatorio para RESPONSIVE -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <!-- 
+  importar o css externo para dentro do nosso HTML
+  1º importamos o reset e plugins e em ultimo o nosso CSS 
+-->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+<body>
+
+  <header class="header-pri">
+    <img class="logo" src="ASSETS/ttc_logo.svg">
+    <nav class="nav-pri">
+      <ul>
+        <li><a href="#" class="select">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#port">PORTFOLIO</a></li>
+        <li><a href="#cont">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="slider">
+    <h1>WELCOME TO OUR STUDIO</h1>
+    <h3>Enjoy your stay!</h3>
+  </section>
+
+
+  <section class="about-us" id="about">
+    <!-- abrir o container para centrar os conteudos ao meio -->
+    <div class="container">
+
+    <div class="separador">
+      <h1>ABOUT US</h1>
+    </div>
+    <!-- dar a class self-clear no pai onde abrirmos layout de colunas -->
+    <div class="self-clear">
+        <div class="col-2">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          <h3>Meet Our Team of Creatives</h3>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.</p>
+        </div>
+        <div class="col-2 self-clear about-team">
+
+          <div class="col-3">
+            <img src="ASSETS/TEAM/david_kim.jpg">
+          </div>
+          <div class="col-3">
+            <img src="ASSETS/TEAM/david_kim.jpg">
+          </div>
+          <div class="col-3">
+            <img src="ASSETS/TEAM/david_kim.jpg">
+          </div>
+          <div class="col-3">
+            <img src="ASSETS/TEAM/david_kim.jpg">
+          </div>
+          <div class="col-3">
+            <img src="ASSETS/TEAM/david_kim.jpg">
+          </div>
+          <div class="col-3">
+            <img src="ASSETS/TEAM/david_kim.jpg">
+          </div>
+            
+        </div>
+    </div> <!-- end self-clear -->
+
+    </div> <!-- end container -->
+  </section>
+
+
+<section class="portfolio" id="port">
+
+    <div class="container">
+
+      <div class="separador">
+        <h1>PORTFOLIO</h1>
+      </div>
+
+      <div class="self-clear">
+
+          <div class="col-4">
+            <div class="tapa"></div>
+            <button class="view-more">more info</button>
+            <img src="ASSETS/PORTFOLIO/1.jpg">
+          </div>
+          <div class="col-4">
+            <div class="tapa"></div>
+            <button class="view-more">more info</button>
+            <img src="ASSETS/PORTFOLIO/1.jpg">
+          </div>
+          <div class="col-4">
+            <div class="tapa"></div>
+            <button class="view-more">more info</button>
+            <img src="ASSETS/PORTFOLIO/1.jpg">
+          </div>
+          <div class="col-4">
+            <div class="tapa"></div>
+            <button class="view-more">more info</button>
+            <img src="ASSETS/PORTFOLIO/1.jpg">
+          </div>
+          <div class="col-4">
+            <div class="tapa"></div>
+            <button class="view-more">more info</button>
+            <img src="ASSETS/PORTFOLIO/1.jpg">
+          </div>
+          <div class="col-4">
+            <div class="tapa"></div>
+            <button class="view-more">more info</button>
+            <img src="ASSETS/PORTFOLIO/1.jpg">
+          </div>
+          <div class="col-4">
+            <div class="tapa"></div>
+            <button class="view-more">more info</button>
+            <img src="ASSETS/PORTFOLIO/1.jpg">
+          </div>
+          <div class="col-4">
+            <div class="tapa"></div>
+            <button class="view-more">more info</button>
+            <img src="ASSETS/PORTFOLIO/1.jpg">
+          </div>
+
+      </div><!-- end self-clear -->
+
+
+    </div> <!-- end container -->
+
+</section>
+
+<section class="contact" id="cont">
+
+  <div class="container">
+
+      <div class="separador">
+          <h1>CONTACT</h1>
+      </div>
+
+
+      <div class="self-clear">
+
+        <div class="col-2-60">
+          <img src="ASSETS/google_maps.png">
+        </div>
+        <div class="col-2-40">
+          <form class="contact-form">
+            <p>
+              <input type="email" name="email" placeholder="Insira o seu email" > 
+            </p>
+            <p>
+              <input type="text" name="assunto" placeholder="Insira o assunto">
+            </p>
+            <p>
+              <textarea rows="8" name="mensagem" placeholder="Inserir mensagem"></textarea>
+            </p>
+            <p><input type="submit" name="submit" value="Enviar"></p>
+
+
+          </form>
+
+        </div>
+
+      </div><!-- end self-clear -->
+
+      <footer class="sub-footer">
+            <ul class="social-media">
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+
+            </ul>
+
+      </footer>
+
+  
+   </div> <!-- end container -->
+</section>
+
+
+</body>
+</html>

@@ -1,0 +1,451 @@
+/*importar as fonts externas com CSS*/
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+
+
+*,*:after,*:before{
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+}
+
+.self-clear{
+	display: flex;
+	flex-flow: row wrap;
+
+}
+
+html{
+	font-family:  'Lato', sans-serif;
+	font-size: 77.5%;
+
+
+/*
+	 1 rem = 16px
+
+	font-size:62.5%;
+
+	isto mete os rem equivalente aos pixels
+	1 rem = 10px;
+	3.6rem = 36px;
+	*/
+
+	/*animar o scroll para o ID correspondente*/
+	scroll-behavior: smooth;
+}
+h1{
+	font-size: 4rem;
+	/*aplicar a font "black" da familia LATO*/
+	font-weight: 900;
+}
+h3{
+	font-size: 2rem;
+	color: #245c4e;
+	margin: 15px 0;
+}	
+p{
+	font-size: 1.5rem;
+    line-height: 34px; /*22px;*/
+}
+
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+
+img,
+video{
+/*	 
+em vez de imagem responsive, vamos usar o object-fit: cover;
+	 de forma a que a imagem ocupe toda a area do elemento PAI (em porporção), nem que para isso corte um pouco da imagem
+
+	 */
+
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+
+/*----------------------------------------------------------*/
+/*-------------------------HEADER---------------------------*/
+/*----------------------------------------------------------*/
+
+.header-pri{
+	width: 100%;
+	height: 200px;
+}
+
+.logo{
+	display: block;
+	position: relative;
+	top: 50px;
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+}
+
+.nav-pri{
+	position: relative;
+	top: 65px;
+	text-align: center;
+}
+
+.nav-pri li{
+	display: inline;
+	border-right: 1px solid #245c4e;
+}
+.nav-pri li:last-child{
+	border-right:none;
+}
+
+.nav-pri  li a {
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	padding: 2px 7px;
+	color: #245c4e;
+	text-decoration: none;
+	margin-right: 3px;
+	/*remover o outline azul quando o ELE está em focus - tab´s*/
+	outline: none;
+}
+
+/*mouse Over*/
+.nav-pri  li a:hover {
+	background-color: #bd965c;
+	color: #fff;
+}
+/*mouse down*/
+.nav-pri  li a:active {
+	background-color: #245c4e;
+}
+
+.nav-pri a.select {
+	background-color: #245c4e;
+	color: #fff;
+
+}
+
+/*----------------------------------------------------------*/
+/*-------------------------SLIDER---------------------------*/
+/*----------------------------------------------------------*/
+
+.slider{
+	position: relative;
+	width: 100%;
+	/*	
+	medida Vh - tem que ver com a altura da viewport do browser
+	100vh = 100% da viewport
+	*/
+	height: 80vh;
+
+	/*andar um nivel para trás nas pastas ../
+	../../ - 2 niveis*/
+	background-image: url(../ASSETS/TT_img.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+.slider h1{
+	position: relative;
+	top: 20%;
+	text-align: center;
+	color: #fff;
+}
+
+.slider h3{
+	position: relative;
+	top: 25%;
+	text-align: center;
+	color: #fff;
+	font-family: 'Courgette', cursive;
+	font-size: 2.8rem;
+}
+
+/*----------------------------------------------------------*/
+/*------------------------ABOUT US--------------------------*/
+/*----------------------------------------------------------*/
+
+.separador{
+	text-align: center;
+	padding: 30px 0;
+	color: #245c4e;
+
+}
+
+.col-2{
+	flex: 1 50%;
+	padding: 15px;
+}
+
+.about-team .col-3{
+	flex: 1 33.333%;
+	border:5px solid transparent;
+}
+
+/*----------------------------------------------------------*/
+/*------------------------PORTFOLIO--------------------------*/
+/*----------------------------------------------------------*/
+
+.portfolio{
+	background-color: #245c4e;
+	padding-bottom: 60px;
+	padding: 15px;
+}
+.portfolio .separador {
+	color: #fff;
+}
+
+.col-4 {
+	position: relative;
+
+	flex: 1 25%;
+
+	border:5px solid transparent;
+
+	/*esconder os ele que estão fora do ele pai*/
+	overflow: hidden;
+}
+
+.tapa {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(36,92,78,.8);
+
+	transition: top .4s ease-in;
+}
+
+.col-4:hover .tapa{
+	top: 0;
+}
+
+.view-more{
+	position: absolute;
+	top: -150%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	margin: auto;
+
+	width: 80px;
+	height:30px;
+
+	background-color: #bd965c;
+	color: #fff;
+
+	border:none;
+
+	/*adicionar um novo cursor ao ELE*/
+	cursor: pointer;
+
+	transition: top .4s ease-in;
+
+
+}
+
+.col-4:hover .view-more{
+	top: 0;
+}
+
+/*----------------------------------------------------------*/
+/*-------------------------CONTACT--------------------------*/
+/*----------------------------------------------------------*/
+.contact{
+
+}
+
+.col-2-60{
+
+	flex: 1 60%;
+	padding: 15px;
+}
+.col-2-40{
+	flex: 1 40%;
+	padding: 15px;
+}
+
+.contact-form p{
+		margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+	width: 100%;
+	font-size: 1.6rem;
+	padding: 15px;
+	border:none;
+	background-color: #e2e2e2;
+	outline: none;
+}
+
+/*selector por atributo e seu valor*/
+form [ type="submit"]{
+		width: 30%;
+		float: right;
+}
+
+.social-media {
+	margin: 30px 0;
+	padding-bottom: 60px;
+}
+
+.social-media li {
+	float: left;
+	width: 32px;
+	height: 32px;
+
+	margin-right: 5px;
+}
+
+.social-media li a{
+	display: block;
+	width: 32px;
+	height: 32px;
+	transition: all 250ms ease-in;
+}
+
+/*
+a pseudo class nth-child(n) permite apanhar o ELE pelo indice numerico
+*/
+.social-media li:nth-child(1) a{
+		background-image:url(../ASSETS/socialSprite.png); 
+}
+
+.social-media li:nth-child(1) a:hover{
+		background-position: 0 32px;
+}
+
+
+.social-media li:nth-child(2) a{
+		background-image:url(../ASSETS/socialSprite.png); 
+		background-position: 32px 0;
+
+}
+
+.social-media li:nth-child(2) a:hover{
+		background-position: 32px 32px;
+}
+
+
+.social-media li:nth-child(3) a{
+		background-image:url(../ASSETS/socialSprite.png); 
+		background-position: 64px 0;
+
+}
+.social-media li:nth-child(3) a:hover{
+		background-position: 64px 32px;
+}
+
+
+.social-media li:nth-child(4) a{
+		background-image:url(../ASSETS/socialSprite.png); 
+		background-position: 96px 0;
+
+}
+.social-media li:nth-child(4) a:hover{
+		background-position: 96px 32px;
+}
+
+.social-media li:nth-child(5) a{
+		background-image:url(../ASSETS/socialSprite.png); 
+		background-position: 128px 0;
+
+}
+.social-media li:nth-child(5) a:hover{
+		background-position: 128px 32px;
+}
+
+/*----------------------------------------------------------*/
+/*-------------------------media queries--------------------------*/
+/*----------------------------------------------------------*/
+
+@media screen and (max-width: 850px){
+
+	html{
+		font-size: 62.5%;
+	}
+
+	.about-team .col-3{
+
+		flex: 1 50%;
+
+	}
+
+	.portfolio .col-4{
+		
+		flex: 1 33.3333%;
+
+	}
+}
+
+@media screen and (max-width: 570px){
+
+	html{
+		font-size: 60%;
+	}
+
+
+	.about-team .col-3{
+		flex: 1 33.3333%;
+
+	}
+
+	.about-us .col-2{
+		flex: 1 100%;
+
+	}
+
+	.portfolio .col-4{
+		flex:1 50%;
+	}
+
+
+	.col-2-60{
+		flex: 1 100%;
+
+	}
+	.col-2-40{
+		flex: 1 100%;
+
+	}
+
+	.container{
+		padding: 0 20px;
+	}
+}
+
+@media screen and (max-width: 340px){
+
+	.nav-pri a{
+		padding: 2px 4px!important;
+	}
+}
+
+
+@media screen and (max-width: 380px){
+
+	html{
+		font-size: 60%;
+	}
+
+
+	.about-team .col-3{
+		flex: 1 50%;
+
+	}
+
+
+	.portfolio .col-4{
+		flex: 1 100%;	
+	}
+
+
+	.container{
+		padding: 0 15px;
+	}
+}
